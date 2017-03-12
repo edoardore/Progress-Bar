@@ -15,7 +15,6 @@ public:
 
     virtual void notify(int bitPercentuale, int filesPercentuale, std::string fileName)=0;
 
-
 };
 
 
