@@ -15,11 +15,11 @@ void Grafica::disegna() {
 }
 
 void Grafica::attach() {
-    //dovrà iscrivere il soggetto
+    subject->subscribe(this);
 }
 
 void Grafica::detach() {
-    //dovrà disiscrivere il soggetto
+    subject->unsubscribe(this);
 }
 
 void Grafica::update(int bitUpdate, int filesUpdate, std::string fileName) {

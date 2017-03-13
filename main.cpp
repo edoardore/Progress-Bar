@@ -1,6 +1,8 @@
 #include <iostream>
 
-int main() {
-   //in attesa di creazione classi
 
+
+
+int main() {
+   //TODO simulare creazione di file e il loro caricamento
 }

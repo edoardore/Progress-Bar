@@ -8,6 +8,7 @@
 
 #include "Observer.h"
 #include <iostream>
+#include "FileManage.h"
 
 class Grafica : public Observer {
 public:
@@ -37,6 +38,7 @@ public:
 private:
     int bUpdate, fUpdate;
     std::string currentName;
+    FileManage *subject;
 };
 
 

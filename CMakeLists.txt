@@ -3,7 +3,7 @@ project(ProgressBar)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Observer.cpp Observer.h Subject.cpp Subject.h Disp.cpp Disp.h Grafica.cpp Grafica.h)
+set(SOURCE_FILES main.cpp Observer.cpp Observer.h Subject.cpp Subject.h Disp.cpp Disp.h Grafica.cpp Grafica.h FileManage.cpp FileManage.h)
 add_executable(ProgressBar ${SOURCE_FILES})
 
 
