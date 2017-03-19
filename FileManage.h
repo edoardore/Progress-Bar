@@ -7,6 +7,7 @@
 
 
 #include "Subject.h"
+#include "Risorse.h"
 #include <list>
 #include <string>
 
@@ -16,7 +17,7 @@ public:
 
     virtual ~FileManage();
 
-    void caricaFiles(); //TODO
+    void caricaFiles();
 
     virtual void subscribe(Observer *o) override;
 
@@ -33,6 +34,7 @@ public:
 private:
 
     std::list<Observer *> observers;
+    std::list<Risorse *> files;
     int fileCaricati;
     int bitCaricati;
 

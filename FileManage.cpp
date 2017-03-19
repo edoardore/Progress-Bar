@@ -3,6 +3,7 @@
 //
 
 #include "FileManage.h"
+#include "Risorse.h"
 #include <iostream>
 
 FileManage::FileManage() : fileCaricati(0), bitCaricati(0) {
@@ -14,7 +15,20 @@ FileManage::~FileManage() {
 }
 
 void FileManage::caricaFiles() {
-    //TODO metodo che carica file...
+    int count = 0;
+    int totBit = 0;
+    for (auto itr = std::begin(files); itr != std::end(files); itr++) {
+        count++;
+        totBit += (*itr)->getBit();
+    }
+    for (auto itr = std::begin(files); itr != std::end(files); itr++) {
+        bitCaricati += (*itr)->getBit();
+        fileCaricati++;
+        std::string name = (*itr)->getFileName();
+        int bitPercentuale = (bitCaricati * 100) / totBit;
+        int filesPercentuale = (fileCaricati * 100) / count;
+        notify(bitPercentuale, filesPercentuale, name);
+    }
 }
 
 void FileManage::subscribe(Observer *o) {
