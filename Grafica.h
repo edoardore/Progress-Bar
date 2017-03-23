@@ -5,13 +5,16 @@
 #ifndef PROGRESSBAR_GRAFICA_H
 #define PROGRESSBAR_GRAFICA_H
 
-
+#include <string.h>
+#include "Disp.h"
 #include "Observer.h"
 #include <iostream>
 #include "FileManage.h"
 
 class Grafica : public Observer {
 public:
+    Grafica(FileManage *f);
+
     virtual ~Grafica();
 
     virtual void disegna();

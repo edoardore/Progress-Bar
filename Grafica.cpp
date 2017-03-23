@@ -5,6 +5,7 @@
 #include "Grafica.h"
 #include <iostream>
 
+Grafica::Grafica(FileManage *f) : subject(f), bUpdate(0), fUpdate(0), currentName("Unknown") {}
 
 Grafica::~Grafica() {
     detach();
