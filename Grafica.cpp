@@ -17,6 +17,7 @@ void Grafica::disegna() {
 
 void Grafica::attach() {
     subject->subscribe(this);
+    std::cout <<"Iscritto!"; //da rimuovere poi.
 }
 
 void Grafica::detach() {

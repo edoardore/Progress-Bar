@@ -6,6 +6,7 @@
 #define PROGRESSBAR_PROGRESSBAR_H
 
 #include <list>
+#include <ncurses.h>
 #include "Grafica.h"
 #include "FileManage.h"
 #include "Risorse.h"
@@ -20,7 +21,7 @@ public:
 
 private:
 
-    //TODO
+    WINDOW *progressbar;
 
 };
 

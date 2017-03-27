@@ -1,5 +1,6 @@
 #include <iostream>
 #include "FileManage.h"
+#include "ProgressBar.h"
 
 void carica(FileManage *ptr) {
     Risorse *risorsa[5];
@@ -12,5 +13,7 @@ void carica(FileManage *ptr) {
 
 int main() {
     FileManage *ptr = new FileManage;
+    ProgressBar barra(ptr);
+    barra.attach();
     carica(ptr);
 }
