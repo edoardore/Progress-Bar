@@ -4,7 +4,7 @@
 
 void carica(FileManage *ptr) {
     Risorse *risorsa[5];
-    risorsa[0] = new Risorse("Risorsa_1", 4);
+    risorsa[0] = new Risorse("Risorsa_01", 4);
     risorsa[1] = new Risorse("Risorsa_02", 8);
     risorsa[2] = new Risorse("Risorsa_03", 16);
     risorsa[3] = new Risorse("Risorsa_04", 4);
