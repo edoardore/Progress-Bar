@@ -19,6 +19,21 @@ void carica(FileManage *ptr) {
     risorsa[12] = new Risorse("Risorsa_13", 4);
     risorsa[13] = new Risorse("Risorsa_14", 8);
     risorsa[14] = new Risorse("Risorsa_15", 8);
+    ptr->storeRisorse(risorsa[0]);
+    ptr->storeRisorse(risorsa[1]);
+    ptr->storeRisorse(risorsa[2]);
+    ptr->storeRisorse(risorsa[3]);
+    ptr->storeRisorse(risorsa[4]);
+    ptr->storeRisorse(risorsa[5]);
+    ptr->storeRisorse(risorsa[6]);
+    ptr->storeRisorse(risorsa[7]);
+    ptr->storeRisorse(risorsa[8]);
+    ptr->storeRisorse(risorsa[9]);
+    ptr->storeRisorse(risorsa[10]);
+    ptr->storeRisorse(risorsa[11]);
+    ptr->storeRisorse(risorsa[12]);
+    ptr->storeRisorse(risorsa[13]);
+    ptr->storeRisorse(risorsa[14]);
 }
 
 int main() {
