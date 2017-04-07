@@ -31,6 +31,8 @@ public:
 
     int getBitCaricati() const;
 
+    void storeRisorse(Risorse *f);
+
 private:
 
     std::list<Observer *> observers;

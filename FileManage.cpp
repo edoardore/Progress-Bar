@@ -56,3 +56,7 @@ const std::list<Observer *> &FileManage::getObservers() const {
 int FileManage::getBitCaricati() const {
     return bitCaricati;
 }
+
+void FileManage::storeRisorse(Risorse *f) {
+    files.push_back(f);
+}
