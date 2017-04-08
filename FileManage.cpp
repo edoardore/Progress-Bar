@@ -53,6 +53,10 @@ const std::list<Observer *> &FileManage::getObservers() const {
     return observers;
 }
 
+const std::list<Risorse *> &FileManage::getFiles() const {
+    return files;
+}
+
 int FileManage::getBitCaricati() const {
     return bitCaricati;
 }

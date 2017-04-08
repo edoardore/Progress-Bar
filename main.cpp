@@ -34,11 +34,12 @@ void carica(FileManage *ptr) {
     ptr->storeRisorse(risorsa[12]);
     ptr->storeRisorse(risorsa[13]);
     ptr->storeRisorse(risorsa[14]);
+    ptr->caricaFiles();
 }
 
 int main() {
     FileManage *ptr = new FileManage;
-    ProgressBar barra(ptr);
-    barra.attach();
+    ProgressBar bar(ptr);
+    bar.attach();
     carica(ptr);
 }

@@ -9,7 +9,6 @@
 
 class Observer {
 public:
-public:
     virtual ~Observer() {}
 
     virtual void update(int bitUpdate, int fileUpdate, std::string fileName)=0;

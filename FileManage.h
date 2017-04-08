@@ -29,6 +29,8 @@ public:
 
     const std::list<Observer *> &getObservers() const;
 
+    const std::list<Risorse *> &getFiles() const;
+
     int getBitCaricati() const;
 
     void storeRisorse(Risorse *f);
