@@ -22,5 +22,9 @@ ProgressBar::~ProgressBar() {
 }
 
 void ProgressBar::disegna() {
+    box(progressbar, ACS_VLINE, ACS_HLINE);
+    mvwprintw(progressbar, 1, 3, "CARICAMENTO...");
+    wtimeout(progressbar, 500);
+    wattron(progressbar, A_STANDOUT);
     //TODO da implementare (mostrerà la progressbar su schermo)
 }
