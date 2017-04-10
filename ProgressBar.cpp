@@ -26,15 +26,21 @@ void ProgressBar::disegna() {
     mvwprintw(progressbar, 1, 3, "CARICAMENTO...");
     wtimeout(progressbar, 500);
     wattron(progressbar, A_STANDOUT);
-    for (int i = 0; i < Grafica::getBUp(); i++) {
-        mvwprintw(progressbar, 3, i + 6, "", 97);
-        waddch(progressbar, 97 | ACS_BULLET);
+    if (Grafica::getBUp() < 101) {
+        for (int i = 0; i < Grafica::getBUp(); i++) {
+            mvwprintw(progressbar, 3, i + 6, "", 97);
+            waddch(progressbar, 97 | ACS_BULLET);
+        }
+        wattroff(progressbar, A_STANDOUT);
+        mvwprintw(progressbar, 5, 80, "Percentuale bit: %d %%", Grafica::getBUp());
+        mvwprintw(progressbar, 6, 80, "Percentuale File: %d %%", Grafica::getFUp());
+        mvwprintw(progressbar, 5, 6, "File: %s", Grafica::getCurrentName().c_str());
+        wrefresh(progressbar);
+        wgetch(progressbar);
     }
-    wattroff(progressbar, A_STANDOUT);
-    mvwprintw(progressbar, 5, 80, "Percentuale bit: %d %%", Grafica::getBUp());
-    mvwprintw(progressbar, 6, 80, "Percentuale File: %d %%", Grafica::getFUp());
-    mvwprintw(progressbar, 5, 6, "File: %s", Grafica::getCurrentName().c_str());
-    wrefresh(progressbar);
-    wgetch(progressbar);
     refresh();
+    if (Grafica::getBUp() == 100) {
+        mvwprintw(progressbar, 1, 40, "FINE!");
+        wrefresh(progressbar);
+    }
 }
