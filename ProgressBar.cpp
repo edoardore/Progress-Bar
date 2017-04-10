@@ -42,5 +42,7 @@ void ProgressBar::disegna() {
     if (Grafica::getBUp() == 100) {
         mvwprintw(progressbar, 1, 40, "FINE!");
         wrefresh(progressbar);
+        getch();
+        endwin();
     }
 }
