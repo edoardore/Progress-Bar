@@ -40,7 +40,9 @@ void ProgressBar::disegna() {
     }
     refresh();
     if (Grafica::getBUp() == 100) {
-        mvwprintw(progressbar, 1, 40, "FINE!");
+        mvwprintw(progressbar, 1, 3, "              ");
+        mvwprintw(progressbar, 1, 40, "CARICAMENTO COMPLETATO!");
+        mvwprintw(progressbar, 25, 57, "Premi qualsiasi tasto per uscire.");
         wrefresh(progressbar);
         getch();
         endwin();
