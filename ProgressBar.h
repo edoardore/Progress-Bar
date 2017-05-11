@@ -8,6 +8,7 @@
 #include <list>
 #include <ncurses.h>
 #include "Grafica.h"
+#include "Disp.h"
 #include "FileManage.h"
 #include "Risorse.h"
 

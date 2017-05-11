@@ -6,7 +6,6 @@
 #include <string>
 #include <ncurses.h>
 
-//inizializzazione della finestra per la barra
 ProgressBar::ProgressBar(FileManage *s) : Grafica::Grafica(s) {
     initscr();
     curs_set(0);
@@ -42,7 +41,7 @@ void ProgressBar::disegna() {
     if (Grafica::getBUp() == 100) {
         mvwprintw(progressbar, 1, 3, "              ");
         mvwprintw(progressbar, 1, 40, "CARICAMENTO COMPLETATO!");
-        mvwprintw(progressbar, 25, 57, "Premi qualsiasi tasto per uscire.");
+        mvwprintw(progressbar, 5, 6, "Premi qualsiasi tasto per uscire.");
         wrefresh(progressbar);
         getch();
         endwin();

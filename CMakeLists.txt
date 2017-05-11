@@ -11,8 +11,6 @@ set(SOURCE_FILES
         Observer.h
         Subject.cpp
         Subject.h
-        Disp.cpp
-        Disp.h
         Grafica.cpp
         Grafica.h
         FileManage.cpp
@@ -20,7 +18,7 @@ set(SOURCE_FILES
         Risorse.cpp
         Risorse.h
         ProgressBar.cpp
-        ProgressBar.h)
+        ProgressBar.h Disp.cpp Disp.h)
 
 add_executable(ProgressBar ${SOURCE_FILES})
 add_library(core ${SOURCE_FILES})
